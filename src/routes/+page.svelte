@@ -64,7 +64,7 @@
             switch (varOperator){
                 //Addition + 
                 case "+":
-                    varX = varX + varY
+                    varX = varX + varY;
                     setValues(e);
                     break;
                 //Subtraction - 
@@ -235,7 +235,7 @@
             width: 300px;
             margin: auto;
             text-align: center;
-            background:rgb(238, 238, 238);
+            background:pink;
             padding:10px;
             padding-top:16px;
             padding-bottom:16px;
