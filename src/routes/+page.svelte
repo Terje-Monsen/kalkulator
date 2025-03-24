@@ -15,9 +15,6 @@
     let inputFloat = $derived(parseFloat(inputJS));
     let inputString = $derived(inputNO);
       
-    function closeCalc () {
-        gridDisplay = "none";
-    }
 
     function trykkTast(event) {
         const key = event.key;
@@ -96,12 +93,6 @@
             }
         } 
     }
-
-    const sunnySide = () => {
-        if (inputNO === "58008" || inputNO === "7734") {
-            rotation +=180;
-        }
-    };
 
     function handleClick(value, type) {
 
@@ -192,8 +183,7 @@
 <svelte:window on:keydown={trykkTast} />
 
 <div class="grid-container" style="transform: rotate({rotation}deg); display: {gridDisplay};">
-    <div class="title" on:click={sunnySide}>{title}</div>
-    <div class="close" on:click={closeCalc}>×</div>
+    <div class="title">{title}</div>
     <input type="text" class="input-field" readonly value={inputString}>
     
     <!-- Rader 3 til 7 med 4 kolonner -->
@@ -235,7 +225,7 @@
             width: 300px;
             margin: auto;
             text-align: center;
-            background:pink;
+            background:rgb(247, 247, 247);
             padding:10px;
             padding-top:16px;
             padding-bottom:16px;
